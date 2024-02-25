@@ -10,3 +10,5 @@ scale = Vector2(0.650321, 0.650321)
 stream = ExtResource("1_yd7u1")
 autoplay = true
 script = ExtResource("2_kj41v")
+
+[connection signal="finished" from="." to="." method="_on_finished"]
