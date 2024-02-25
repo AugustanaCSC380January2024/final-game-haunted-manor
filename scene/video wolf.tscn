@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c853kksodd32p"]
+
+[ext_resource type="VideoStream" path="res://wolf scene.ogv" id="1_6vkkn"]
+[ext_resource type="Script" path="res://script/video wolf.gd" id="2_cc8cx"]
+
+[node name="wolf talk" type="VideoStreamPlayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 12.0
+offset_right = 774.0
+offset_bottom = 452.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.626804, 0.626804)
+stream = ExtResource("1_6vkkn")
+autoplay = true
+script = ExtResource("2_cc8cx")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

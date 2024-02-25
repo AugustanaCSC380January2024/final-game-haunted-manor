@@ -1,0 +1,118 @@
+[gd_scene load_steps=10 format=3 uid="uid://pwcj2op8rmnc"]
+
+[ext_resource type="Script" path="res://script/wolf_world.gd" id="1_fnoka"]
+[ext_resource type="Texture2D" uid="uid://uapp5bbai671" path="res://scene/forest.png" id="2_031fa"]
+[ext_resource type="PackedScene" uid="uid://cib3djkjds2cm" path="res://scene/side game/shader.tscn" id="3_6db6j"]
+[ext_resource type="FontFile" uid="uid://boaftq8ok4hvl" path="res://asset/font/Robot_Font.otf" id="4_po8q4"]
+[ext_resource type="Texture2D" uid="uid://dyexeesrlcgra" path="res://asset/font/GUI.png" id="5_vcvhq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nx38l"]
+bg_color = Color(0.168627, 0.192157, 0.270588, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nsb37"]
+texture = ExtResource("5_vcvhq")
+expand_margin_left = 20.0
+expand_margin_top = 5.0
+expand_margin_right = 20.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(113, 113, 30, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h4m64"]
+texture = ExtResource("5_vcvhq")
+expand_margin_left = 20.0
+expand_margin_top = 5.0
+expand_margin_right = 20.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(113, 113, 30, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vh0wj"]
+texture = ExtResource("5_vcvhq")
+expand_margin_left = 20.0
+expand_margin_top = 5.0
+expand_margin_right = 20.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(113, 81, 30, 14)
+
+[node name="wolf world" type="CanvasLayer"]
+
+[node name="wolf world ui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -18.0
+offset_top = -5.0
+offset_right = 22.0
+offset_bottom = 35.0
+script = ExtResource("1_fnoka")
+
+[node name="wolf world" type="Sprite2D" parent="wolf world ui"]
+position = Vector2(588, 324)
+scale = Vector2(0.626189, 0.626189)
+texture = ExtResource("2_031fa")
+
+[node name="shader" parent="wolf world ui" instance=ExtResource("3_6db6j")]
+layer = 1
+visible = false
+
+[node name="Label" type="Label" parent="wolf world ui"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 152.0
+offset_right = 936.0
+offset_bottom = 248.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("4_po8q4")
+theme_override_font_sizes/font_size = 30
+text = "In the history of the Manor of Shadows, 
+what dark legacy has haunted the family for generations, 
+binding them to a malevolent pact with supernatural forces?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="wolf world ui"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 287.0
+offset_right = 823.0
+offset_bottom = 364.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("4_po8q4")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_nx38l")
+alignment = 1
+clear_button_enabled = true
+
+[node name="Button" type="Button" parent="wolf world ui"]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 404.0
+offset_right = 619.0
+offset_bottom = 481.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("4_po8q4")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_nsb37")
+theme_override_styles/hover = SubResource("StyleBoxTexture_h4m64")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vh0wj")
+text = "OK"
+
+[node name="Timer" type="Timer" parent="wolf world ui"]
+wait_time = 1.5
+
+[node name="Label2" type="Label" parent="wolf world ui"]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 81.0
+offset_right = 699.0
+offset_bottom = 115.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("4_po8q4")
+theme_override_font_sizes/font_size = 35
+text = "Press \"Q\" to quit "
+
+[connection signal="pressed" from="wolf world ui/Button" to="wolf world ui" method="_on_button_pressed"]
+[connection signal="timeout" from="wolf world ui/Timer" to="wolf world ui" method="_on_timer_timeout"]

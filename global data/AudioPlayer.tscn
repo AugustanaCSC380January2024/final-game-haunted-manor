@@ -12,3 +12,4 @@ volume_db = -9.152
 autoplay = true
 
 [node name="sound effect" type="AudioStreamPlayer2D" parent="."]
+volume_db = 1.664
