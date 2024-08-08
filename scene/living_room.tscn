@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://de5we43erlwy5"]
+[gd_scene load_steps=19 format=3 uid="uid://de5we43erlwy5"]
 
 [ext_resource type="Script" path="res://script/living_room.gd" id="1_ikd2p"]
 [ext_resource type="Texture2D" uid="uid://copgqmevgj5rh" path="res://asset/room asset/living room/living room.png" id="1_jl6h5"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://script/libraryDoor.gd" id="6_0242g"]
 [ext_resource type="Texture2D" uid="uid://bpd75gdrtkcar" path="res://asset/room asset/living room/2.png" id="6_kmvo2"]
 [ext_resource type="Texture2D" uid="uid://1ld4hngrc38q" path="res://asset/room asset/living room/341-9.png" id="8_phl1q"]
+[ext_resource type="Texture2D" uid="uid://rj6y6gcx62ya" path="res://asset/room asset/living room/526.png" id="9_wy8et"]
 [ext_resource type="Texture2D" uid="uid://ddxkj3ty85vv" path="res://scene/3.png" id="11_gtmss"]
 [ext_resource type="Script" path="res://script/hint area.gd" id="11_v1jxu"]
 [ext_resource type="Script" path="res://scene/hint.gd" id="13_qluhs"]
@@ -61,6 +62,15 @@ scale = Vector2(1.05429, 0.648024)
 script = ExtResource("6_0242g")
 targetScene = "library"
 
+[node name="710" type="TextureRect" parent="."]
+offset_left = 958.316
+offset_top = 542.903
+offset_right = 2038.32
+offset_bottom = 1622.9
+rotation = 0.32299
+scale = Vector2(0.040971, 0.0336035)
+texture = ExtResource("6_kmvo2")
+
 [node name="709" type="TextureRect" parent="."]
 offset_left = 976.707
 offset_top = 549.888
@@ -70,13 +80,31 @@ rotation = 0.32299
 scale = Vector2(0.040971, 0.0336035)
 texture = ExtResource("5_yxxhb")
 
-[node name="527" type="TextureRect" parent="."]
-offset_left = 36.4058
-offset_top = 535.117
-offset_right = 1116.41
-offset_bottom = 1615.12
+[node name="528" type="TextureRect" parent="."]
+offset_left = 24.1776
+offset_top = 555.37
+offset_right = 1104.18
+offset_bottom = 1635.37
 rotation = -0.102086
 scale = Vector2(0.0341402, 0.0214938)
+texture = ExtResource("6_kmvo2")
+
+[node name="527" type="TextureRect" parent="."]
+offset_left = 40.4845
+offset_top = 555.541
+offset_right = 1120.49
+offset_bottom = 1635.54
+rotation = -0.102086
+scale = Vector2(0.0341402, 0.0214938)
+texture = ExtResource("9_wy8et")
+
+[node name="342" type="TextureRect" parent="."]
+offset_left = 985.038
+offset_top = 249.129
+offset_right = 2065.04
+offset_bottom = 1329.13
+rotation = 1.56397
+scale = Vector2(0.0308598, 0.0324511)
 texture = ExtResource("6_kmvo2")
 
 [node name="341" type="TextureRect" parent="."]
@@ -87,6 +115,15 @@ offset_bottom = 1344.04
 rotation = 1.56397
 scale = Vector2(0.0308598, 0.0324511)
 texture = ExtResource("5_2hbsl")
+
+[node name="529" type="TextureRect" parent="."]
+offset_left = 578.33
+offset_top = 582.566
+offset_right = 1658.33
+offset_bottom = 1662.57
+rotation = -0.321331
+scale = Vector2(0.0318169, 0.0311771)
+texture = ExtResource("6_kmvo2")
 
 [node name="526" type="TextureRect" parent="."]
 offset_left = 592.231
